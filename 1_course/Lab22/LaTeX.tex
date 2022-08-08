@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}          
+\usepackage{amsthm, amsmath, amssymb}
+\usepackage{setspace}
+\usepackage{mathtext}
+\usepackage[english,russian]{babel}
+\usepackage{pgfplots}
+
+\title{Основные теоремы дифференциального исчисления}
+\author{Каширин Кирилл}
+\date{22 Февраля 2021}
+\begin{document}
+	\maketitle
+	\textbf {Определение 3.} Точки локального максимума и минимума называются точками \textit {локального экстремума}, а значения функции в них — \textit {локальными экстремумами функции}.
+	\medskip \par \textbf {Пример 1.} Пусть
+	\begin{equation}
+		f(x) = 
+		\begin{cases}
+			x^2 &\text{, если  $-1\le x < 2$,}\\
+			4 &\text{, если $2\le x$}
+		\end{cases}
+	\end{equation}
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[->] (-1,0) -- (4,0) node[anchor=north] {$x$};
+			\draw	(0,0) node[anchor=north] {0}
+			(-1,0) node[anchor=north] {-1}
+			(1,0) node[anchor=north] {1}
+			(2,0) node[anchor=north] {2}
+			(3,0) node[anchor=north] {3};
+			\draw[->] (0,0) -- (0,5) node[anchor=east] {$y$};
+			\draw (0,1) node[anchor=east] {1}
+			(0,2) node[anchor=east] {2}
+			(0,3) node[anchor=east] {3}
+			(0,4) node[anchor=east] {4};
+			\draw[thick] (2,4) -- (4,4);
+			\draw [thick] (-1,1) --(-1,1) parabola[bend at end] (0,0);
+			\draw [thick] (0,0) -- (0,0) parabola[] (2,4);	
+		\end{tikzpicture}
+	\end{center}
+	\par	Для этой функции
+	\par \textit {х} = —1 — точка строгого локального максимума;
+	\par \textit {х} = 0 — точка строгого локального минимума;
+	\par \textit {х} = 2 — точка локального максимума;
+	\par \textit {х} > 2 — точки экстремума, являющиеся одновременно точками и локального максимума, и локального минимума, поскольку здесь функция локально постоянна.
+	\medskip \par \textbf {Пример 2.} Пусть $f(х) = sin(\frac 1x)$ на множестве Е = R\ 0.
+	Точки $х = (\frac \pi 2 + 2k\pi)^{-1}$ , $k \in Z$  являются точками строгого локального максимума, а точки $х = (-\frac \pi 2 + 2k\pi)^{-1}$ , $k \in Z$
+	строгого локального минимума для $f(x)$ (см. рис. 12).
+	\medskip	\par \textbf {Определение 4.} Точку $x_o \in E$ экстремума функции $f: Е \rightarrow М$  будем называть точкой внутреннего экстремума, если $х_o$ является предельной точкой как для множества 
+	$Е_-$ = \{$х \in Е$ | $х < х_o$\}, так и для множества $Е_+$ = \{$х \in Е$ | $ х > х_о$\}.
+	\medskip	\par В примере 2 все точки экстремума являются точками внутреннего экстремума, а в примере 1 точка х = — 1 не является точкой внутреннего экстремума.
+	\medskip	\par \textbf {Лемма 1} (Ферма). \textit {Если функция $f: Е \rightarrow М$ дифференцируема в точке внутреннего экстремума $x_o \in E$, то ее производная в этой точке равна нулю:}
+	$f^\prime(x_o)=0$.
+\end{document} 

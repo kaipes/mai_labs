@@ -1,0 +1,13 @@
+Sobolev PA 15 4 Paris 4 Yes 2
+Smirnov IV 10 3 Moscow 2 No 1
+Soblev PA 15 4 Paris 4 Yes 2
+Popov NN 20 2 Pskov 1 No 0
+Novikov EM 19 9 Oslo 3 Yes 0
+Kuznecov VE 29 7 Tokio 9 No 1
+Sokolov SP 17 4 Madrid 4 Yes 2
+Dekabrev NA 12 3 Paris 3 No 0
+Mayev VI 10 2 Sochi 2 No 0
+Bulochkin AM 18 5 Rome 4 Yes 3
+Grablev EP 12 5 Rome 3 Yes 1
+Orlov AG 12 5 Odessa 3 No 3
+Gorbunov PI 12 4 Rome 1 Yes 2

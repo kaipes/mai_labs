@@ -1,0 +1,147 @@
+\documentclass[12pt]{article}
+
+\usepackage{fullpage}
+\usepackage{multicol,multirow}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{minted}
+
+\usepackage{color} %% это для отображения цвета в коде
+\usepackage{listings} %% собственно, это и есть пакет listings
+
+\lstset{ %
+language=C++,                 % выбор языка для подсветки (здесь это С++)
+basicstyle=\small\sffamily, % размер и начертание шрифта для подсветки кода
+numbers=left,               % где поставить нумерацию строк (слева\справа)
+%numberstyle=\tiny,           % размер шрифта для номеров строк
+stepnumber=1,                   % размер шага между двумя номерами строк
+numbersep=5pt,                % как далеко отстоят номера строк от подсвечиваемого кода
+backgroundcolor=\color{white}, % цвет фона подсветки - используем \usepackage{color}
+showspaces=false,            % показывать или нет пробелы специальными отступами
+showstringspaces=false,      % показывать или нет пробелы в строках
+showtabs=false,             % показывать или нет табуляцию в строках
+frame=single,              % рисовать рамку вокруг кода
+tabsize=2,                 % размер табуляции по умолчанию равен 2 пробелам
+captionpos=t,              % позиция заголовка вверху [t] или внизу [b] 
+breaklines=true,           % автоматически переносить строки (да\нет)
+breakatwhitespace=false, % переносить строки только если есть пробел
+escapeinside={\%*}{*)}   % если нужно добавить комментарии в коде
+}
+
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\textbf{МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ РОССИЙСКОЙ ФЕДЕРАЦИИ
+\medskip
+МОСКОВСКИЙ АВИАЦИОННЫЙ ИНСТИТУТ
+(НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСТИТЕТ)
+\vfill\vfill
+{\Huge ЛАБОРАТОРНАЯ РАБОТА №3} \\
+по курсу объектно-ориентированное программирование
+I семестр, 2021/22 уч. год}
+\end{center}
+\vfill
+
+Студент \uline{\it {Каширин Кирилл Дмитриевич, группа М8О-208Б-20}\hfill}
+
+Преподаватель \uline{\it {Дорохов Евгений Павлович}\hfill}
+
+\vfill
+\end{titlepage}
+
+\subsection*{Условие}
+
+Задание: \
+Вариант 7: Шестиугольник, Восьмиугольник, Треугольник.\
+Необходимо спроектировать и запрограммировать на языке C++ классы трех фигур, согласно варианту задания. Классы должны удовлетворять следующим правилам:
+\begin{enumerate}
+\item Должны быть названы также, как в вариантах задания и расположенны в раздельных файлах: отдельно заголовки (имя\_класса\_с\_маленькой\_буквы.h), отдельно описание методов (имя\_класса\_с\_маленькой\_буквы.cpp).
+\item Иметь общий родительский класс Figure;
+\item Содержать конструктор, принимающий координаты вершин фигуры из стандартного потока std::cin, расположенных через пробел. Пример: "0.0 0.0 1.0 0.0 1.0 1.0 0.0 1.0"
+\item Содержать набор общих методов:
+\begin{itemize}
+    \item size\_t VertexesNumber() - метод, возвращающий количество вершин фигуры;
+    \item double Area() - метод расчета площади фигуры;
+    \item void Print(std::ostream& os) - метод печати типа фигуры и ее координат вершин в поток вывода os в формате: "Rectangle: (0.0, 0.0) (1.0, 0.0) (1.0, 1.0) (0.0, 1.0)" с переводом строки в конце.
+\end{itemize}
+\end{enumerate}
+
+\subsection*{Описание программы}
+
+Исходный код лежит в 11 файлах:
+\begin{enumerate}
+\item src/main.cpp: основная программа, взаимодействие с пользователем посредством комманд из меню
+
+\item include/figure.h:    описание абстрактного класса фигур
+
+\item include/point.h:     описание класса точки
+\item include/triangle.h:  описание класса треугольника, наследующегося от figures
+\item include/hexagon.h: описание класса шестиугольника, наследующегося от figures
+\item include/octagon.h:    описание класса восьмиугольника, наследующегося от figures
+
+\item include/point.cpp:     реализация класса точки
+\item include/triangle.cpp:  реализация класса треугольника, наследующегося от figures
+\item include/hexagon.cpp: реализация класса прямоугольника, наследующегося от figures
+\item include/octagon.cpp:    реализация класса восьмиугольника, наследующегося от figures
+
+\end{enumerate}
+
+\subsection*{Дневник отладки}
+
+
+\subsection*{Недочёты}
+Недочетов не заметил
+
+\subsection*{Выводы}
+Данная лабораторная работа помогла мне разобраться с основами ООП, принципами ООП, такими как наследование, инкапсуляция, полиморфизм, абстракция, а также с понятием пререзгрузка оператора. Я реализовал несколько классов данных фигуры и функции, которые требовались в задании.
+
+
+\vfill
+
+\subsection*{Исходный код:}
+
+{\Huge figure.h}
+\inputminted
+    {C++}{figure.h}
+    
+{\Huge point.h}
+\inputminted
+    {C++}{point.h}
+    
+{\Huge point.cpp}
+\inputminted
+    {C++}{point.cpp}
+
+{\Huge hexagon.h}
+\inputminted
+    {C++}{hexagon.h}
+    
+{\Huge hexagon.cpp}
+\inputminted
+    {C++}{hexagon.cpp}
+
+{\Huge octagon.h}
+\inputminted
+    {C++}{octagon.h}
+    
+{\Huge octagon.cpp}
+\inputminted
+    {C++}{octagon.cpp}
+
+{\Huge triagnle.h}
+\inputminted
+    {C++}{triangle.h}
+    
+{\Huge triangle.cpp}
+\inputminted
+    {C++}{triangle.cpp}
+
+{\Huge main.cpp}
+\inputminted
+    {C++}{main.cpp}
+    \pagebreak
+    
+\end{document}

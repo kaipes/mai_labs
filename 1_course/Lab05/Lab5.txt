@@ -1,0 +1,108 @@
+0, ,*,zer
+zer,*,<,zer1   
+zer1,1,a,zer2  zer1,0,b,ed2
+zer2,0,>,zer2  ed2,0,>,ed2
+zer2,a,>,zer2  ed2,b,>,ed2
+zer2,*,>,zer2  ed2,*,>,ed2
+zer2,1,>,zer2  ed2,1,>,ed2
+zer2, ,1,zer3  ed2, ,0,ed3
+               ed3, ,*,ed4
+zer3,1,<,zer3  ed3,*,<,ed3
+zer3,0,<,zer3  ed3,1,<,ed3
+zer3,*,<,zer3  ed3,0,<,ed3 
+zer3,a,1,zer4  ed3,b,0,ed4
+zer4,1,<,zer1  ed4,0,<,zer1
+zer1, ,>,zer5  zer8, ,&,zer20
+zer20,1,>,zer20
+zer20,0,>,zer20
+zer20,&,>,zer20
+zer20, ,&,obr  
+obr,&,<,obr1 
+obr1,1,<,obr1 
+obr1,0,<,obr1 
+obr1,&,>,del 
+obr1,*,<,obr1 
+zer20,*,>,zer20
+del,1, ,del1
+del,0, ,del1 
+del1, ,>,del
+del,*, ,del3
+del,&,>,del
+del3, ,>,del3
+del3,1, ,del3
+del3,0, ,del3
+del3,*, ,sd
+sd, ,>,sd  
+sd,*, ,sd* 
+sd*, ,<,sd* 
+sd*,1,>,sd** 
+sd*,0,>,sd** 
+sd**, ,&,sd** 
+sd**,&,>,sd
+sd,0,a,sd1  
+sd,1,b,sd10 
+sd,&, ,fin 
+fin, ,<,fin 
+fin,1,<,fin 
+fin,0,<,fin 
+fin,&, ,fin1
+sd1,a,<,sd1 
+sd10,b,<,sd10 
+fin1,1,<,fin1 
+fin1,0,<,fin1 
+fin1,&, ,fin2
+zer5,*,>,zer5                 
+zer5,1,>,zer5  
+zer5,0,>,zer5  
+zer5, ,*,zer6  
+zer6,1,<,zer6    
+zer6,0,<,zer6  
+zer6,*,<,zer6  
+zer6, ,*,zer7   
+zer7,*,<,zer8    
+fin2, ,>,pr1
+pr1,1,>,pr1
+pr1,0,>,pr1
+pr1, , ,pr2
+pr2, ,>,pr3
+pr3,1,>,pr3
+pr3,0,>,pr3
+pr3, ,#,pr3
+fin1, ,<,fin1
+zer8,1,a,zer9   sd10, ,<,sd10
+zer9,0,>,zer9   sd10,1,<,sd10
+zer9,a,>,zer9  sd10,0,<,sd10
+zer9,*,>,zer9   sd10,&,>,sd12
+zer9,1,>,zer9   sd12,1,>,sd12
+zer9, ,1,zer10   sd12,0,>,sd12
+zer10,1,<,zer10  sd12, ,1,sd13
+zer10,0,<,zer10    
+zer10,*,<,zer10   
+zer10,a,1,zer11 
+zer11,1,<,zer8  
+zer8,0,b,ed5    
+ed5,0,>,ed5     
+ed5,b,>,ed5 
+ed5,*,>,ed5 
+ed5,1,>,ed5 
+ed5, ,0,ed6 
+ed6,*,<,ed6 
+ed6,1,<,ed6 
+ed6,0,<,ed6 
+ed6,b,0,ed7 
+ed7,0,<,zer8
+sd1, ,<,sd1
+sd1,1,<,sd1
+sd1,0,<,sd1
+sd1,&,>,sd2
+sd2,1,>,sd2
+sd2,0,>,sd2
+sd2, ,0,sd3
+sd3, ,>,sd3
+sd13, ,>,sd13
+sd13,0,>,sd13
+sd3,a, ,sd
+sd13,b, ,sd
+sd13,1,>,sd13
+sd3,0,>,sd3
+sd3,1,>,sd3
